@@ -50,7 +50,7 @@ const slicemasters = data.slicemasters.nodes;
     skip={pageContext.skip} base={`/slicemasters`}/>
       <SlicemasterGrid>
         {slicemasters.map((person) => (
-          <SlicemasterStyles>
+          <SlicemasterStyles key={person.id}>
             <Link to={`/slicemaster/${person.slug.current}`}>
               <h2>
                 <span className="mark">{person.name}</span>
